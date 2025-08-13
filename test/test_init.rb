@@ -6,10 +6,9 @@ ENV['TEST_FIXTURE_DETAIL'] ||= ENV['D']
 puts RUBY_DESCRIPTION
 
 require_relative '../init'
-require 'rubygems/runtime/controls'
 
 require 'pp'
 
 require 'test_bench'; TestBench.activate
 
-#TestBench::ImportConstants.(Rubygems::Runtime)
+Rubygems::Runtime.activate

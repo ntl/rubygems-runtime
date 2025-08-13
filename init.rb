@@ -1,5 +1,5 @@
 require_relative 'load_path'
 
-require 'bundle/setup'
+require 'bundler/setup'
 
 require 'rubygems/runtime'
