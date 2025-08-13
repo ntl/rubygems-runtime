@@ -6,10 +6,10 @@ ENV['TEST_FIXTURE_DETAIL'] ||= ENV['D']
 puts RUBY_DESCRIPTION
 
 require_relative '../init'
-require 'TEMPLATE-PATH/controls'
+require 'rubygems/runtime/controls'
 
 require 'pp'
 
-require 'TEMPLATE-TEST-BENCH-GEM-NAME'; TEMPLATE-TEST-BENCH-NAMESPACE.activate
+require 'test_bench'; TestBench.activate
 
-#TestBench::ImportConstants.(TEMPLATE-NAMESPACE)
+#TestBench::ImportConstants.(Rubygems::Runtime)
