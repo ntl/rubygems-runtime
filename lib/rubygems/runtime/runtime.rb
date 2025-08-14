@@ -6,8 +6,10 @@ module Rubygems
       end
 
       Kernel.module_exec do
-        def gem(...)
+        def gem(*)
         end
+
+        private :gem
       end
     end
   end
