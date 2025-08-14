@@ -4,9 +4,9 @@ An alternative RubyGems loader that pulls in only the minimal components require
 
 ## Usage
 
-1. Add `rubygems/runtime` to a project's `Gemfile`
+1. Add `rubygems/runtime` to `Gemfile`
 2. Use `bundle install --standalone`, which generates a freestanding `bundler/setup.rb` that doesn't depend on Rubygems or Bundler
-3. Disable Rubygems by either running your Ruby program via `ruby --disable-gems` or by adding `--disable-gems` to `RUBYOPT`:
+3. Disable Rubygems by either running the Ruby program via `ruby --disable-gems` or by adding `--disable-gems` to `RUBYOPT`:
 
    ```sh
    ruby --disable-gems script/rails server
@@ -19,6 +19,10 @@ An alternative RubyGems loader that pulls in only the minimal components require
 
    script/rails server
    ```
+
+## Alternate Usage (Simpler)
+
+Add `install-gems.sh` from [Bundler Standalone Improvements](https://github.com/ntl/bundler-standalone-improvements) and use it to install gems, rather than invoking `bundle` directly.
 
 ## License
 
