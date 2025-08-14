@@ -1,4 +1,6 @@
-require 'rubygems/runtime/assure_rubygems_not_loaded'
+require 'rubygems/runtime/detect_rubygems_loaded'
+
+# If RubyGems has been loaded, requiring this library must not modify RubyGems
 if defined?(Gem)
   return
 end
@@ -9,8 +11,10 @@ require 'rubygems/version'
 require 'rubygems/runtime/gem_extensions'
 require 'rubygems/runtime/kernel_extensions'
 
-Gem.module_exec do
+module Gem
   extend Rubygems::Runtime::GemExtensions
 end
 
-Kernel.include Rubygems::Runtime::KernelExtensions
+module Kernel
+  include Rubygems::Runtime::KernelExtensions
+end
