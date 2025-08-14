@@ -24,7 +24,7 @@ Gem::Specification.new do |spec|
 
   spec.require_paths = ['lib']
 
-  spec.files = Dir.glob('lib/**/*')
+  spec.files = Dir.glob('lib/**/*').reject { |file| file.end_with?('.PLACEHOLDER') }
 
   spec.platform = Gem::Platform::RUBY
 
