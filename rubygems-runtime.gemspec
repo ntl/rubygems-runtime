@@ -24,7 +24,7 @@ Gem::Specification.new do |spec|
 
   spec.require_paths = ['lib', 'lib-rubygems-trap']
 
-  spec.files = Dir.glob('lib/**/*')
+  spec.files = Dir.glob('{lib,lib-rubygems-trap}/**/*')
 
   spec.platform = Gem::Platform::RUBY
 
