@@ -1,12 +1,12 @@
-# Rubygems Runtime
+# RubyGems Runtime
 
 An alternative RubyGems loader that pulls in only the minimal components required at runtime, instead of the full RubyGems stack used during gem installation. Ideal for use with standalone bundles, allowing RubyGems to be disabled via --disable-gems while still providing essential runtime functionality.
 
 ## Usage
 
 1. Add `rubygems/runtime` to `Gemfile`
-2. Use `bundle install --standalone`, which generates a freestanding `bundler/setup.rb` that doesn't depend on Rubygems or Bundler
-3. Disable Rubygems by either running the Ruby program via `ruby --disable-gems` or by adding `--disable-gems` to `RUBYOPT`:
+2. Use `bundle install --standalone`, which generates a freestanding `bundler/setup.rb` that doesn't depend on RubyGems or Bundler
+3. Disable RubyGems by either running the Ruby program via `ruby --disable-gems` or by adding `--disable-gems` to `RUBYOPT`:
 
    ```sh
    ruby --disable-gems script/rails server

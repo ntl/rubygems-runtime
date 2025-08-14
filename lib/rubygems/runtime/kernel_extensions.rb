@@ -1,4 +1,4 @@
-module Rubygems
+module RubyGems
   module Runtime
     module KernelExtensions
       def gem(*)

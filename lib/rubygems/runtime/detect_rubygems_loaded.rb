@@ -13,7 +13,7 @@ else
   message << "ERROR: "
 end
 
-message << "Rubygems has already been required; ‘"
+message << "RubyGems has already been required; ‘"
 
 if STDERR.tty?
   message << "\e[1m"

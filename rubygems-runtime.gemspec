@@ -15,7 +15,7 @@ Gem::Specification.new do |spec|
   allowed_push_host = ENV.fetch('RUBYGEMS_PUBLIC_AUTHORITY') { 'https://rubygems.org' }
   spec.metadata['allowed_push_host'] = allowed_push_host
 
-  spec.metadata['namespace'] = 'Rubygems::Runtime'
+  spec.metadata['namespace'] = 'RubyGems::Runtime'
 
   spec.license = 'MIT'
 

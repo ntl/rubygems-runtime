@@ -8,7 +8,7 @@ else
   message << "ERROR: "
 end
 
-message << "An attempt to require Rubygems was made; ‘"
+message << "An attempt to require RubyGems was made; ‘"
 
 if STDERR.tty?
   message << "\e[1m"

@@ -1,6 +1,6 @@
 require_relative 'automated_init'
 
-context "Require Rubygems" do
+context "Require RubyGems" do
   test "Is a LoadError" do
     assert_raises(LoadError) do
       require 'rubygems'

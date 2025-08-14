@@ -55,7 +55,7 @@ echo
 echo "Posture: $POSTURE"
 echo "Gem Path: $gem_path"
 echo "Gem Executables Dir: $gems_exec_dir"
-echo "Rubygems Sources: $rubygems_sources"
+echo "RubyGems Sources: $rubygems_sources"
 echo
 echo "Gemspecs:"
 printf -- "- %s\n" "${gemspecs[@]}"

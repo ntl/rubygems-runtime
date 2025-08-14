@@ -12,9 +12,9 @@ require 'rubygems/runtime/gem_extensions'
 require 'rubygems/runtime/kernel_extensions'
 
 module Gem
-  extend Rubygems::Runtime::GemExtensions
+  extend RubyGems::Runtime::GemExtensions
 end
 
 module Kernel
-  include Rubygems::Runtime::KernelExtensions
+  include RubyGems::Runtime::KernelExtensions
 end
