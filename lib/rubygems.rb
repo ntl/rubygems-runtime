@@ -1,3 +1,5 @@
+# Intercept ‘require "rubygems"’ and exit Ruby with a nonzero status
+
 message = String.new
 
 if STDERR.tty?

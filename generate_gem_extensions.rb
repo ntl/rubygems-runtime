@@ -38,7 +38,7 @@ File.open('lib/rubygems/runtime/gem_extensions/generated.rb', 'w') do |rb|
 
     if index > 0
       rb.puts
-      end
+    end
 
     rb.puts modified_source
   end

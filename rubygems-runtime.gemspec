@@ -22,9 +22,9 @@ Gem::Specification.new do |spec|
   spec.authors = ['Brightworks Digital']
   spec.email = 'development@bright.works'
 
-  spec.require_paths = ['lib', 'lib-rubygems-trap']
+  spec.require_paths = ['lib']
 
-  spec.files = Dir.glob('{lib,lib-rubygems-trap}/**/*')
+  spec.files = Dir.glob('lib/**/*')
 
   spec.platform = Gem::Platform::RUBY
 
