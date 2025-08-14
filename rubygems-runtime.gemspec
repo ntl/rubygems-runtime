@@ -3,9 +3,9 @@ Gem::Specification.new do |spec|
   spec.name = 'rubygems-runtime'
   spec.version = '0.0.0.0'
 
-  spec.summary = "## Summary goes here"
+  spec.summary = "Minimal RubyGems loader for runtime use, compatible with --disable-gems"
   spec.description = <<~TEXT.each_line(chomp: true).map(&:strip).join(' ')
-  ## Description goes here
+  An alternative RubyGems loader that pulls in only the minimal components required at runtime, instead of the full RubyGems stack used during gem installation. Ideal for use with standalone bundles, allowing RubyGems to be disabled via --disable-gems while still providing essential runtime functionality.
   TEXT
 
   spec.homepage = 'http://github.com/ntl/rubygems-runtime'

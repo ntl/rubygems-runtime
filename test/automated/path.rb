@@ -1,7 +1,7 @@
 require_relative 'automated_init'
 
-context "Paths" do
-  paths = Gem.paths
+context "Path" do
+  paths = Gem.path
   control_paths = [Gem.default_dir]
 
   comment paths.pretty_inspect
