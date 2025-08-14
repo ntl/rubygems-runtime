@@ -17,19 +17,6 @@ echo
 echo "Publishing"
 echo "= = ="
 
-if [ -z "${RUBYGEMS_PRIVATE_AUTHORITY:-}" ]; then
-  printf "\n\e[1;33mWarning: RUBYGEMS_PRIVATE_AUTHORITY is not set\e[39;22m\n"
-fi
-rubygems_private_authority="${RUBYGEMS_PRIVATE_AUTHORITY:-}"
-rubygems_private_authority_access_key=${RUBYGEMS_PRIVATE_AUTHORITY_ACCESS_KEY:-}
-
-if [ -z "${RUBYGEMS_PUBLIC_AUTHORITY:-}" ]; then
-  printf "\n\e[1;31mError: RUBYGEMS_PUBLIC_AUTHORITY is not set\e[39;22m\n"
-  false
-fi
-rubygems_public_authority=$RUBYGEMS_PUBLIC_AUTHORITY
-rubygems_public_authority_access_key=${RUBYGEMS_PUBLIC_AUTHORITY_ACCESS_KEY:-}
-
 function get_gemspec_attr() {
   gem_file=$1
   attr=$2
@@ -49,27 +36,7 @@ for gem in $(find . -maxdepth 2 -name '*.gem'); do
   echo "Gem: $(basename "$gem")"
   echo "- - -"
 
-  license="$(get_gemspec_attr "$gem" license)"
-  echo "License: ${license:-(none)}"
-
-  if [ -n "$license" ]; then
-    rubygems_authority="$rubygems_public_authority"
-    rubygems_authority_access_key="$rubygems_public_authority_access_key"
-  elif [ -n "$rubygems_private_authority" ]; then
-    rubygems_authority="$rubygems_private_authority"
-    rubygems_authority_access_key="$rubygems_private_authority_access_key"
-  else
-    echo -e "\e[1;31mLicense is proprietary and RUBYGEMS_PRIVATE_AUTHORITY is not set\e[m"
-    false
-  fi
-  echo "Rubygems Authority: $rubygems_authority"
-
-  cmd="gem push"
-  if [ -n "$rubygems_authority_access_key" ]; then
-    cmd="$cmd --key $rubygems_authority_access_key"
-  fi
-  cmd="$cmd --host $rubygems_authority \"$gem\""
-
+  cmd="gem push \"$gem\""
   echo "$cmd"
   eval "$cmd || true"
 done
