@@ -10,5 +10,3 @@ require_relative '../init'
 require 'pp'
 
 require 'test_bench'; TestBench.activate
-
-Rubygems::Runtime.activate
