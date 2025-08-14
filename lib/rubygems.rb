@@ -1,5 +1,4 @@
-# This file intercepts attempts to require RubyGems via ‘require "rubygems"’.
-# It aborts the Ruby process and exits with a nonzero status.
+# Intercept attempts to load RubyGems and aborts the process with a nonzero exit status
 
 message = String.new
 

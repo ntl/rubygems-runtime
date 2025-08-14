@@ -1,3 +1,6 @@
+# Print a warning if RubyGems has already been loaded
+# If RUBYGEMS_RUNTIME_STRICT is set to ‘on’, abort the process with a nonzero exit status 
+
 if not defined?(Gem::VERSION)
   return
 end
