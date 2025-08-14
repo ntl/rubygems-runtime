@@ -1,4 +1,4 @@
-if defined?(Gem)
+if defined?(Gem::VERSION)
   message = String.new
 
   if STDERR.tty?
