@@ -1,3 +1,5 @@
+require 'rbconfig'
+
 require 'rubygems/runtime/detect_rubygems_loaded'
 
 # If RubyGems has been loaded, requiring this library must not modify RubyGems
