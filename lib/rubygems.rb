@@ -1,4 +1,5 @@
-# Intercept ‘require "rubygems"’ and exit Ruby with a nonzero status
+# This file intercepts attempts to require RubyGems via ‘require "rubygems"’.
+# It aborts the Ruby process and exits with a nonzero status.
 
 message = String.new
 
@@ -28,9 +29,8 @@ end
 
 STDERR.puts(message)
 
-random_feature = 'rubygems-' + rand(2 ** 64).to_s(36)
-
 begin
+  random_feature = 'random-feature-' + rand(2 ** 64).to_s(36)
   require random_feature
 rescue LoadError => random_feature_load_error
   message = random_feature_load_error.message.sub(random_feature, 'rubygems')
