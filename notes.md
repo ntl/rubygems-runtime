@@ -2,5 +2,4 @@
 
 ## To Do
 
-- Mechanism for detecting if Rubygems is already loaded
-- `Kernel#gem`
+- Gem extensions module generator should reopen `GemExtensions` and be formatted correctly
