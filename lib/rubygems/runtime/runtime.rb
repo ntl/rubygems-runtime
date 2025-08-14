@@ -1,11 +1,14 @@
 module Rubygems
   module Runtime
-    def self.activate(target=nil)
-      target ||= Gem
+    def self.activate
+      Gem.module_exec do
+        extend GemExtensions
+      end
 
-      target.extend(GemExtensions)
-
-      target.class_variable_set(:@@win_platform, nil)
+      Kernel.module_exec do
+        def gem(...)
+        end
+      end
     end
   end
 end
